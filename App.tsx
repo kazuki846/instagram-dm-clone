@@ -1,12 +1,17 @@
-import { StatusBar } from "expo-status-bar"
-import { StyleSheet, Text, View } from "react-native"
-import React from "react"
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import AppBar from './src/components/AppBar'
+import FollowList from './src/components/FollowList'
+import UserContents from './src/components/UserContents'
 
 const App = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <AppBar pageFunctionTitle="Instagram" iconLeft="hearto" iconRight="message-circle" />
+      <FollowList />
+      <UserContents userId='taka_rider3' />
+      <UserContents userId='taka_rider3' />
     </View>
   )
 }
@@ -14,9 +19,7 @@ const App = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: '#ffffff'
   }
 })
 
