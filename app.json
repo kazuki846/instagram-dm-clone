@@ -2,6 +2,7 @@
   "expo": {
     "name": "instagram-dm-clone",
     "slug": "instagram-dm-clone",
+    "scheme": "instagram-dm-clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +26,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

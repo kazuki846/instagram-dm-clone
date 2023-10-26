@@ -10,7 +10,7 @@ const AccountIcon = (props: Props): JSX.Element => {
 	const {userId, source} = props
 	return (
 		<View style={styles.AccountInfo}>
-			<AccountImage source={source} style={null} />
+			<AccountImage source={source} />
 			<Text style={styles.AccountId}>{userId}</Text>
 		</View>
 	)

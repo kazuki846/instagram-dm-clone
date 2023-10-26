@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, type ImageStyle } from 'react-native'
 import {Image} from 'expo-image'
 
 const blurhash =
@@ -6,7 +6,7 @@ const blurhash =
 
 	interface Props {
 		source: string
-		style: any
+		style?: ImageStyle
 	}
 
 const AccountImage = (props: Props):JSX.Element => {

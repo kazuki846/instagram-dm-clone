@@ -1,11 +1,11 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import AppBar from './src/components/AppBar'
-import FollowList from './src/components/FollowList'
-import UserContents from './src/components/UserContents'
-import Footer from './src/components/Footer'
+import AppBar from '../components/AppBar'
+import FollowList from '../components/FollowList'
+import UserContents from '../components/UserContents'
+import Footer from '../components/Footer'
 
-const App = (): JSX.Element => {
+const Home = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default App
+export default Home
