@@ -28,22 +28,20 @@ const AppBar = (props: Props): JSX.Element => {
 
 const styles = StyleSheet.create({
   appbar: {
+    flexDirection: 'row',
+    alignItems: 'center',
     width: '100%',
-    height: 95,
-    justifyContent: 'flex-end',
-    borderBottomColor: 'black'
+    height: 40,
   },
   appbarLeft: {
     flexDirection: 'row',
     alignItems: 'center',
     left: 10,
-    bottom: 10
   },
   appbarRight: {
     position: 'absolute',
     width: 70,
     right: 25,
-    bottom: 10
   },
   appbarIcon: {
     flexDirection: 'row',

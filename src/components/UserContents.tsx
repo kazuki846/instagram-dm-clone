@@ -2,6 +2,7 @@ import { Image } from 'expo-image'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import { SimpleLineIcons, AntDesign, Feather, Octicons, FontAwesome } from '@expo/vector-icons';
 import { useState } from 'react';
+import AccountImage from './AccountImage';
 
 
 const blurhash =
@@ -17,16 +18,8 @@ const UserContents = (props: Props): JSX.Element => {
 	return (
 		<View style={styles.userPost}>
 			<View style={styles.userInfo}>
-				<Image
-          style={styles.icon}
-          source="https://picsum.photos/seed/696/3000/2000"
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={1000}
-        />
-				<View style={styles.userId}>
-					<Text>{userId}</Text>
-				</View>
+				<AccountImage source="https://picsum.photos/seed/696/3000/2000" style={{width: 50, height: 50, borderRadius: 25, marginRight: 10 }}/>
+				<Text style={{fontSize: 17}}>{userId}</Text>
 				<View style={styles.option}>
 					<SimpleLineIcons name="options" size={18} color="black" />
 				</View>
@@ -53,13 +46,7 @@ const UserContents = (props: Props): JSX.Element => {
 					<Text style={styles.like}>いいね！54件</Text>
 					<Text style={styles.description}>山が、、連なっている、、、</Text>
 					<View style={styles.comment}>
-						<Image
-							style={styles.commentImage}
-							source="https://picsum.photos/seed/696/3000/2000"
-							placeholder={blurhash}
-							contentFit="cover"
-							transition={1000}
-						/>
+					<AccountImage source="https://picsum.photos/seed/696/3000/2000" style={{width: 30, height: 30, borderRadius: 15, marginRight: 10 }}/>
 						<TextInput
 							onChangeText={onChangeComment}
 							placeholder='コメントを追加...'
@@ -78,12 +65,9 @@ const styles = StyleSheet.create({
 	},
 	userInfo: {
 		flexDirection: 'row',
+		alignItems: 'center',
 		height: 60,
-	},
-	userId: {
-		justifyContent: 'center',
-		height: 60,
-		paddingLeft: 15
+		padding: 10
 	},
 	icon: {
 		width: 50,
@@ -97,7 +81,7 @@ const styles = StyleSheet.create({
 		height: 370
 	},
 	option: {
-		justifyContent: 'center',
+		justifyContet: 'center',
 		height: 60,
 		position: 'absolute',
 		right: 10
@@ -132,12 +116,6 @@ const styles = StyleSheet.create({
 		left: 15,
 		marginTop: 5,
 		marginBottom: 5
-	},
-	commentImage: {
-		width: 30,
-		height: 30,
-		borderRadius: 15,
-		marginRight: 8
 	},
 	description: {
 		left: 15,
